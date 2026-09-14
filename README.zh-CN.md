@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://jiangyt1412.github.io/dayflow/">
-    <img src="docs/media/hero.jpg" alt="DayFlow 宣传主视觉：奶油白与鼠尾草绿，搭配毕业主题应用图标。" width="100%">
+    <img src="docs/media/hero-v2.jpg" alt="DayFlow 宣传主视觉：奶油白与鼠尾草绿，搭配毕业主题应用图标。" width="100%">
   </a>
 </p>
 
@@ -27,7 +27,7 @@
 
 DayFlow 将任务计划与日常记录放进奶油白、鼠尾草绿的简洁界面。安排重要的事，为眼前的任务留出专注时间，也能回顾生活中的点滴。
 
-![DayFlow 的 Tasks、Focus 和 Insights 界面宣传示意图，使用虚构演示数据。](docs/media/product-preview.jpg)
+![DayFlow 任务编辑、睡眠记录和 Insights 界面宣传示意图，使用虚构演示数据。](docs/media/product-preview-v2.jpg)
 
 <p align="center"><sub>基于应用界面制作的宣传示意图 · 演示数据</sub></p>
 

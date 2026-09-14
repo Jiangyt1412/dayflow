@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://jiangyt1412.github.io/dayflow/">
-    <img src="docs/media/hero.jpg" alt="DayFlow — Find your daily rhythm. A cream and sage campaign illustration featuring the graduation-themed app icon." width="100%">
+    <img src="docs/media/hero-v2.jpg" alt="DayFlow — Find your daily rhythm. A cream and sage campaign illustration featuring the graduation-themed app icon." width="100%">
   </a>
 </p>
 
@@ -27,7 +27,7 @@
 
 DayFlow brings planning and daily records together in a quiet, cream-and-sage interface. Choose what matters, give it your attention, and look back on the time you have spent.
 
-![Illustrated preview of DayFlow Tasks, Focus and Insights, based on the application with synthetic demo data.](docs/media/product-preview.jpg)
+![Illustrated preview of the DayFlow task editor, sleep records and Insights, with synthetic demo data.](docs/media/product-preview-v2.jpg)
 
 <p align="center"><sub>Illustrated product preview · Demo data</sub></p>
 
