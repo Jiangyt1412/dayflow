@@ -21,6 +21,8 @@
 
 <p align="center"><sub>No account required · Local data storage · Offline after setup</sub></p>
 
+<p align="center"><strong>Version 1.2.0</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
+
 ---
 
 ## Your day, in one place
@@ -37,7 +39,9 @@ DayFlow brings planning and daily records together in a quiet, cream-and-sage in
 | **Keep life in view**                                                                                                                | **See your daily rhythm**                                                                                                       |
 | Record sleep, meals and personal care alongside your plans. Edit a record when the details change.                                   | Explore **Insights** over a chosen date range, with summaries and charts drawn from your own records.                           |
 
-Saved focus sessions remain in your history when you delete their linked task.
+**New in 1.2.0:** Write a daily note and record your mood in **Insights → Notes**. In **Focus**, see four time totals, a category pie chart, a 24-hour distribution and daily/yearly trends.
+
+Saved focus sessions show their linked task name and remain in your history when you delete the task. Names of tasks already deleted before this version cannot be recovered from missing data.
 
 ## Make yourself at home
 
@@ -51,7 +55,7 @@ Open the app online first, then check **Settings** for **Ready to work offline**
 
 DayFlow stores records locally in the browser or installed app you are using. **There is no account or automatic cloud sync.** Another device, browser, or Home Screen installation may have a separate set of records.
 
-- **Export backup** saves a full JSON backup. Keep a copy periodically and before moving to another installation.
+- **Export backup** saves a full JSON backup, including saved journal entries. Keep a copy periodically and before moving to another installation.
 - **Import backup** validates that JSON file and, after confirmation, **replaces the current local data**. It does not merge two sets of records.
 - **Export CSV** provides selected records for spreadsheets; it is not a full backup.
 
