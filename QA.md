@@ -1,5 +1,15 @@
 # Validation report
 
+## Version 1.2.1 — 2026-09-16
+
+- `pnpm test`: **87 tests passed**, 11 files. Added 13 Focus range cases covering preset windows, inclusive custom boundaries, invalid dates, pauses, cross-midnight sessions, all-time aggregation, categories, DST and the maximum supported calendar year.
+- `pnpm test:e2e`: **19 tests passed (36.9 seconds)** against a fresh production build. Includes the entire preceding 17-test regression suite and two new interaction tests. Browser launch used execution outside the macOS sandbox.
+- New browser checks: touched SVG chart surfaces and focused child layers have no outline; Tab focus retains a visible 2px ring and arrow keys show the tooltip; overnight bedtimes appear above subsequent wake times; Meals clock ticks ascend top-to-bottom; count/duration axes retain their normal direction. Axis label separation is at least 12px on one axis at 320, 390 and 768px, with no page overflow.
+- Focus browser checks: all five pie date-range options produce the expected saved-active-minute totals; inclusive custom dates, empty results, invalid/reversed dates, category filtering and connected labels; monthly controls do not change the pie or fixed-period totals. New date fields reuse the iPhone DateTimeInput wrapper and fit at 320, 390 and 768px.
+- Independent in-app browser inspection at 390px used the isolated development demo database. It reproduced a blue outline on a focused Recharts internal grid layer (`g[tabindex=-1]`) before the final fix, and inspected the updated chart and custom-range pie layouts. Recharts also makes its root SVG focusable for keyboard navigation. Both layers are covered by the pointer-specific outline rule.
+- TypeScript and root production build passed. Deployment uses the separate `BASE_PATH=/dayflow/` production build.
+- Still not physically verified: the updated app on the user's iPhone. No changes were made to stored records, database identity, backup schema, icons or haptics.
+
 ## Version 1.2.0 — 2026-09-16
 
 - `pnpm test`: **74 tests passed**, 11 files. Includes additive Dexie v1→v2 migration, Notes save/edit/delete and stale-edit protection, v1/v2 backup compatibility, preserved focus task names after task deletion, time aggregation across pauses, midnight, months, years and DST; and pie geometry/label collision checks.
@@ -96,15 +106,15 @@ Seven Playwright end-to-end tests are supplied in `tests/browser/app.spec.ts`.
 
 The user ran the corrected suite in their normal terminal on 2026-09-13: **7 passed in 10.3 seconds**. This result was supplied by the user; it was not produced by the sandboxed agent runtime. All seven supplied flows passed:
 
-| Flow | Latest user-run result |
-| --- | --- |
-| Task content, plan, shared category and persistence | Passed |
-| Sleep, meals and hygiene | Passed |
-| Running/paused timer recovery and linked task | Passed |
-| Backup, restore, CSV and invalid import | Passed |
-| Production PWA and offline record changes | Passed |
-| Five routes at 320/390/1440 pixels and a mobile dialog | Passed |
-| Empty Insights without invalid numbers | Passed |
+| Flow                                                   | Latest user-run result |
+| ------------------------------------------------------ | ---------------------- |
+| Task content, plan, shared category and persistence    | Passed                 |
+| Sleep, meals and hygiene                               | Passed                 |
+| Running/paused timer recovery and linked task          | Passed                 |
+| Backup, restore, CSV and invalid import                | Passed                 |
+| Production PWA and offline record changes              | Passed                 |
+| Five routes at 320/390/1440 pixels and a mobile dialog | Passed                 |
+| Empty Insights without invalid numbers                 | Passed                 |
 
 The first run's two failures were both blocked at an exact `getByLabel('Category')` selector. All three affected lookups now use the combobox role and accessible name; the user's second run passed those steps. The second run exposed missing persistence waits in the tests: clicking Save task was followed immediately by reload, and clicking Pause was followed by a one-time timer read and reload. Neither click waits for asynchronous IndexedDB work. The test now waits for the editor to close after the save transaction, and for the committed Paused/Resume state before reloading. It also verifies the persisted category, date, subtask, and that the paused timer stays frozen. No assertion was removed or test skipped to hide the failures. **The subsequent user-run suite passed all seven tests, including these strengthened checks.**
 
@@ -125,7 +135,6 @@ Still requiring a supported browser/device test run:
 - All 14 repository application/configuration files have matching remote Git blob hashes and sizes; the initial README was preserved.
 - The live HTTPS homepage returned **200**. Downloaded all 12 application resources (HTML, both JS chunks, CSS, manifest, service worker, Workbox runtime, favicon and four PNG icons) with certificate verification enabled; every response matched the validated local release byte for byte. `.nojekyll` and `_config.yml` are deployment configuration, not runtime resources.
 - This confirms deployment and resource delivery. Browser control still timed out when opening the live page, so live UI interaction and physical iPhone acceptance are not claimed as completed. The user's seven passing browser tests cover the matching local production application.
-
 
 Run the supplied checks in a normal local/CI environment:
 

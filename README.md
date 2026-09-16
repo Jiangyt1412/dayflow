@@ -21,7 +21,7 @@
 
 <p align="center"><sub>No account required · Local data storage · Offline after setup</sub></p>
 
-<p align="center"><strong>Version 1.2.0</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
+<p align="center"><strong>Version 1.2.1</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
 
 ---
 
@@ -39,7 +39,9 @@ DayFlow brings planning and daily records together in a quiet, cream-and-sage in
 | **Keep life in view**                                                                                                                | **See your daily rhythm**                                                                                                       |
 | Record sleep, meals and personal care alongside your plans. Edit a record when the details change.                                   | Explore **Insights** over a chosen date range, with summaries and charts drawn from your own records.                           |
 
-**New in 1.2.0:** Write a daily note and record your mood in **Insights → Notes**. In **Focus**, see four time totals, a category pie chart, a 24-hour distribution and daily/yearly trends.
+**New in 1.2.1:** Choose 7, 30 or 90 days, all time or custom dates for the Focus category pie. Sleep and meal timelines now read from earlier at the top to later at the bottom, with clearer axis spacing and no blue tap outline.
+
+**Introduced in 1.2.0:** Write a daily note and record your mood in **Insights → Notes**. In **Focus**, see four time totals, a category pie chart, a 24-hour distribution and daily/yearly trends.
 
 Saved focus sessions show their linked task name and remain in your history when you delete the task. Names of tasks already deleted before this version cannot be recovered from missing data.
 
