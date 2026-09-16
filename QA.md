@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.3.0 — 2026-09-17
+
+- `pnpm test`: **95 tests passed**, 13 files. New tests cover range-clipped task breakdowns, pauses and midnight, missing links, deleted-name grouping, undo single use/expiry, concurrent edits, restored schedules and focus links (including a timer finished after task deletion), and invalidation after import or clearing data.
+- `pnpm test:e2e`: **24 tests passed** on a fresh production build. Includes all 19 preceding regressions and five new interaction cases. Chromium was launched outside the macOS sandbox.
+- Browser checks cover bottom-navigation alignment; editor entrance/exit and reduced motion; an inert closing dialog with submit interception so Escape/Enter cannot save a cancelled draft; validation and Saving/Saved states; completion/deletion undo across navigation; schedules and saved focus after undo; long horizontal drags reveal rather than delete; only one row reveals at a time; tap Delete plus Undo; linked, deleted and unlinked task minutes under pie selections; category label/leader highlighting, blank/keyboard reset, range changes and 320px containment.
+- Additional targeted browser checks exercise Chromium touchStart/touchMove/touchEnd events as well as mouse drags. These are simulated touch events, not a physical iPhone test.
+- The in-app browser was inspected at 390px and 320px using the isolated development demo database: mobile navigation highlight, task-editor header spacing, pie selection and task breakdown fit. The viewport override and temporary tab were removed afterward.
+- Existing completion, timer recovery, backup/restore, offline caching, linked-focus preservation, Notes drafts, chart axes/focus and connected-label regressions passed.
+- No IndexedDB identity, database version or backup schema change. Undo markers are temporary metadata excluded from exports. Pending undo cannot restore data after a backup replacement or clear.
+- Limitations: Undo covers only the most recent action for 10 seconds in the current app session. Deleted task records without a retained task ID can only be grouped by saved name. Physical iPhone gesture feel and vibration remain unverified; no new claim of universal Safari vibration support is made.
+
 ## Version 1.2.1 — 2026-09-16
 
 - `pnpm test`: **87 tests passed**, 11 files. Added 13 Focus range cases covering preset windows, inclusive custom boundaries, invalid dates, pauses, cross-midnight sessions, all-time aggregation, categories, DST and the maximum supported calendar year.

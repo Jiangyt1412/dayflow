@@ -2,6 +2,23 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.3.0 — 2026-09-17
+
+- Added a sliding, pale-green selection indicator to mobile bottom navigation.
+- Added Saving / Saved feedback to task, record, category and note saves. Focus controls now show pending actions and a brief play/pause icon transition. Success appears only after the write succeeds.
+- Added short enter/exit animations to editor dialogs. Reduced Motion disables these animations and the moving navigation indicator.
+- Tap a Focus pie slice or its connected label to highlight the slice, leader and label together. The list below shows each task's active minutes in that category for the selected date range, plus category time and percentage. Tap blank chart space, Clear selection or Escape to return to all categories.
+- Added a 10-second Undo for the latest task completion, reopening or deletion. Undo remains available while navigating within the open app. Restoring a deleted task also restores its schedule and eligible focus links without replacing session times or notes. Importing or clearing data invalidates pending undo; refreshing does not retain the Undo prompt.
+- Swipe a task left to reveal Delete. Even a full swipe only reveals the button; deletion requires a separate tap. Vertical scrolling remains available, and the existing editor Delete action is retained.
+
+### Data details
+
+Pie task minutes use completed active intervals clipped to the same date range as the pie; pauses are excluded. Sessions with no linked task have a separate row. Deleted tasks retain their saved names when available. Records that have only a saved name and no task ID are grouped by that name, so identical names cannot reliably identify different deleted tasks. No database or backup schema migration is required; transient undo tokens are excluded from JSON exports.
+
+### Verification
+
+95 unit/integration tests and all 24 production browser tests passed. Checks cover persistence before animation ends, native validation, navigation and reduced motion, cross-page undo, preserved schedules/focus, swipe-to-reveal, category selection, date-range task totals, keyboard reset and narrow layouts. TypeScript and production builds passed. Browser checks and desktop phone-width previews do not verify physical iPhone gestures or vibration. See [QA.md](QA.md).
+
 ## 1.2.1 — 2026-09-16
 
 - Removed the browser's blue outline when tapping or clicking chart surfaces and internal SVG layers. Keyboard focus indicators and arrow-key chart navigation remain available.
