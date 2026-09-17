@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.3.1 — 2026-09-17
+
+- `pnpm test`: **119 tests passed**, 14 files. Added duration-display boundaries and millisecond aggregation checks so repeated short intervals do not lose a whole minute through floating-point accumulation. Raw interval timestamps and chart proportions retain their precision.
+- `pnpm test:e2e`: **25 tests passed (1.1 minutes)** on a fresh production build. TypeScript and the root production build passed as part of that command. Chromium was launched outside the macOS sandbox.
+- Updated pie coverage verifies that a category slice or connected label opens a task pie, with the expected task times and category-relative percentages. It checks linked, deleted and unlinked tasks; All categories and Escape return; restored keyboard focus; range changes; a single-task full-circle pie; 320px containment; reduced motion; and removal of the old selected/muted slice states and list below the chart. Clicking blank space no longer exits the task pie.
+- Added a task-list regression for the missing first divider, retained separators between rows, deleting the first task and restoring it with Undo. Existing persistence, timer recovery, backup/restore, offline use, Notes, chart-axis and task-interaction regressions continue to pass.
+- Test corrections match the new accessible chart name, **Focus time by hour**, and wait for a dialog's entrance animation to finish before sampling its layout. No test is skipped and layout assertions remain in place.
+- The in-app browser was inspected at **390px and 320px** using the isolated development demo database. Task-pie labels, return navigation and the first-row divider were viewed. The temporary tab and viewport override were removed afterward. This was a desktop preview, not a physical iPhone test.
+- Focus chart labels, tooltips and tables omit partial minutes for readability; positive values below one minute display `<1 min`, and values of at least 60 minutes use hours and minutes. This changes presentation, not saved timing precision. Numeric CSV fields and minute-based editor inputs retain their existing units.
+- No IndexedDB identity, database version, backup format, icons or haptics change. Physical iPhone animation feel, installation behavior and vibration were not tested in this release.
+
 ## Version 1.3.0 — 2026-09-17
 
 - `pnpm test`: **95 tests passed**, 13 files. New tests cover range-clipped task breakdowns, pauses and midnight, missing links, deleted-name grouping, undo single use/expiry, concurrent edits, restored schedules and focus links (including a timer finished after task deletion), and invalidation after import or clearing data.

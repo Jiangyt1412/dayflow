@@ -2,6 +2,18 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.3.1 — 2026-09-17
+
+- Tap a Focus category slice or connected label to open a new pie showing that category's tasks, with a short fade and slide transition. Each task keeps a connected label with its time and share of the category total. This replaces the selected-slice highlight and the task list below the chart.
+- Return with **All categories** or Escape. Keyboard navigation restores focus to the original category label; Reduced Motion skips the transition. Changing the date range or category filter returns to the category pie.
+- Focus chart labels, axes, tooltips and data tables show hours and minutes for durations of at least one hour, such as **3h 40m**. Shorter durations use whole minutes; positive durations below one minute show **<1 min**. Partial minutes are omitted only from display. Saved timestamps, chart proportions and numeric CSV values retain their precision; minute-based inputs remain unchanged.
+- Fixed an aggregation boundary where adding several short focus intervals as fractional minutes could display a full minute as less than one minute. Category and task totals now add milliseconds before converting to minutes.
+- Removed the gray divider above the first task in the Tasks list. Separators between tasks remain, including after deleting or restoring the first task with Undo.
+
+### Verification
+
+119 unit/integration tests across 14 files and all 25 production browser tests passed. Coverage includes the task pie and return navigation, connected labels and proportions, range changes, reduced motion, duration boundaries and first-row styling after Delete/Undo. TypeScript and the production build passed. A separate development-demo preview was inspected at 390px and 320px; these desktop checks do not establish physical iPhone behavior. No database identity or backup schema change. See [QA.md](QA.md).
+
 ## 1.3.0 — 2026-09-17
 
 - Added a sliding, pale-green selection indicator to mobile bottom navigation.

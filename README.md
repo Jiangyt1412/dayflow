@@ -21,7 +21,7 @@
 
 <p align="center"><sub>No account required · Local data storage · Offline after setup</sub></p>
 
-<p align="center"><strong>Version 1.3.0</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
+<p align="center"><strong>Version 1.3.1</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
 
 ---
 
@@ -39,7 +39,9 @@ DayFlow brings planning and daily records together in a quiet, cream-and-sage in
 | **Keep life in view**                                                                                                                | **See your daily rhythm**                                                                                                       |
 | Record sleep, meals and personal care alongside your plans. Edit a record when the details change.                                   | Explore **Insights** over a chosen date range, with summaries and charts drawn from your own records.                           |
 
-**New in 1.3.0:** A moving mobile navigation highlight, clear save/timer feedback and gentle editor transitions. Tap a category slice to explore task-by-task focus time. Swipe a task left to reveal Delete, then tap to delete; Undo the latest task action within 10 seconds.
+**New in 1.3.1:** Tap a category to move smoothly into a new pie of its tasks, with connected time and percentage labels. Return with **All categories**. Focus durations of an hour or more now use hours and minutes, and the first task no longer has an extra divider above it. [Read the release notes](CHANGELOG.md).
+
+**Introduced in 1.3.0:** A moving mobile navigation highlight, clear save/timer feedback and gentle editor transitions. Tap a category slice to explore task-by-task focus time. Swipe a task left to reveal Delete, then tap to delete; Undo the latest task action within 10 seconds.
 
 **Introduced in 1.2.1:** Choose 7, 30 or 90 days, all time or custom dates for the Focus category pie. Sleep and meal timelines now read from earlier at the top to later at the bottom, with clearer axis spacing and no blue tap outline.
 
