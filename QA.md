@@ -1,5 +1,17 @@
 # Validation report
 
+## Version 1.4.0 — 2026-09-24
+
+- `pnpm test`: **148 tests passed**, 15 files. The 29 new focus-record unit/integration cases cover validation, category/task links, retained names, timing precision, analytics and backup compatibility, stale save/delete protection and active-timer isolation.
+- `pnpm test:e2e`: **32 tests passed (1.6 minutes)** in one complete run against a fresh production build: four new focus-record cases, three new Insights-navigation cases and the preceding 25 regressions. TypeScript and the root production build passed as part of that command. Chromium was launched outside the macOS sandbox.
+- The separate `BASE_PATH=/dayflow/` production build passed, with **35 precache entries**. These checks establish the local release build; publication is verified separately.
+- Insights touch-event checks verify Focus-first/Notes-last section order, bounded left/right navigation, automatic visibility of the selected tab, retained Focus filters and Notes drafts, textarea gesture exclusion, vertical scrolling, horizontal chart scrolling, short-gesture rejection, Reduced Motion and 320px containment. They use simulated Chromium touch events, not a physical iPhone.
+- Focus browser checks verify manual creation linked to a completed task, reload and backup persistence, task/Insights totals, exact metadata-only interval and pause preservation, cancelled drafts, continuous timing corrections across midnight, invalid/future timing rejection, unchanged active timers, deletion confirmation and 320px/640px editor bounds with pinned Save/Close actions.
+- Test selectors now match the accessible names of the new record fields and distinguish the global Time range from the retained hidden Focus control. Notes restoration explicitly opens Notes after a remount defaults to Focus. The final full run passes without skipped tests; earlier failed attempts are not counted as passes.
+- The in-app browser was inspected at **390px and 320px** using the isolated development demo database. The new Focus record editor's fields and pinned Save/Close actions fit within the dialog. No records were written to the user's installed app.
+- Save and delete reject stale snapshots inside the write transaction; no edit can silently recreate a deleted record. Record changes leave the active timer unchanged and use the existing focus-session format, with task totals and analytics recalculated from saved sessions. There is no database identity, database version or backup schema change.
+- Desktop checks cannot establish physical iPhone swipe feel, native keyboard/date-picker behavior or vibration. No new universal iPhone haptics claim is made.
+
 ## Version 1.3.1 — 2026-09-17
 
 - `pnpm test`: **119 tests passed**, 14 files. Added duration-display boundaries and millisecond aggregation checks so repeated short intervals do not lose a whole minute through floating-point accumulation. Raw interval timestamps and chart proportions retain their precision.

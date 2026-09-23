@@ -21,7 +21,7 @@
 
 <p align="center"><sub>No account required · Local data storage · Offline after setup</sub></p>
 
-<p align="center"><strong>Version 1.3.1</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
+<p align="center"><strong>Version 1.4.0</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
 
 ---
 
@@ -39,7 +39,11 @@ DayFlow brings planning and daily records together in a quiet, cream-and-sage in
 | **Keep life in view**                                                                                                                | **See your daily rhythm**                                                                                                       |
 | Record sleep, meals and personal care alongside your plans. Edit a record when the details change.                                   | Explore **Insights** over a chosen date range, with summaries and charts drawn from your own records.                           |
 
-**New in 1.3.1:** Tap a category to move smoothly into a new pie of its tasks, with connected time and percentage labels. Return with **All categories**. Focus durations of an hour or more now use hours and minutes, and the first task no longer has an extra divider above it. [Read the release notes](CHANGELOG.md).
+**New in 1.4.0 · September 24, 2026:** Swipe through **Insights**, with **Focus** first and **Notes** last. Missed the timer? Use **Focus → Recent sessions → Add record**, or open a saved session to correct its start, duration, category, task and note. Tap **Save** to keep your changes. [Read the release notes](CHANGELOG.md).
+
+A manual record is one continuous focus period. Editing a saved start time or duration replaces its original intervals and removes pauses; the editor warns before saving. Changing only the category, task or note preserves the recorded timing. The active timer is unaffected.
+
+**Introduced in 1.3.1:** Tap a category to move smoothly into a new pie of its tasks, with connected time and percentage labels. Return with **All categories**. Focus durations of an hour or more now use hours and minutes, and the first task no longer has an extra divider above it. [Read the release notes](CHANGELOG.md).
 
 **Introduced in 1.3.0:** A moving mobile navigation highlight, clear save/timer feedback and gentle editor transitions. Tap a category slice to explore task-by-task focus time. Swipe a task left to reveal Delete, then tap to delete; Undo the latest task action within 10 seconds.
 

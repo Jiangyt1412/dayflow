@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.4.0 — 2026-09-24
+
+- Insights now opens on **Focus**, followed by **Sleep, Meals, Hygiene, Tasks and Notes**. Swipe left/right over ordinary content to switch sections, or keep using the tabs. Section filters and unsaved Notes drafts survive these switches. Controls, charts, horizontal scrolling and browser screen-edge gestures retain their own interactions; section animation respects Reduced Motion.
+- Added **Focus → Recent sessions → Add record** for missed sessions. Open any saved record to edit its start date/time, active hours/minutes/seconds, category, task and note. Completed tasks are available for linking. Tap the header **Save** to commit; closing does not save, and record notes no longer save on blur.
+- Manual entries and timing corrections use one continuous active interval. Changing a saved start time or duration removes the original pauses, with a warning in the editor. Metadata-only edits retain the exact original intervals, pauses and milliseconds. New or corrected timing must have positive duration and finish at or before the current time.
+- Saved task-name snapshots are retained when available. Saving or deleting an out-of-date record is rejected if another tab changed or deleted it. Record changes update task totals and Insights without changing the active timer.
+
+### Verification
+
+148 unit/integration tests across 15 files and all 32 production browser tests passed. Checks cover manual focus records, timing corrections, metadata-only precision, stale save/delete protection, active-timer isolation, swipe navigation, retained drafts and filters, gesture exclusions and narrow layouts. TypeScript, the root production build and the `/dayflow/` deployment build passed; the deployment build includes 35 precache entries. A separate development-demo preview was inspected at 390px and 320px; desktop checks do not establish physical iPhone behavior. No database identity or backup schema change. See [QA.md](QA.md).
+
 ## 1.3.1 — 2026-09-17
 
 - Tap a Focus category slice or connected label to open a new pie showing that category's tasks, with a short fade and slide transition. Each task keeps a connected label with its time and share of the category total. This replaces the selected-slice highlight and the task list below the chart.
