@@ -1,5 +1,15 @@
 # Validation report
 
+## Version 1.4.1 — 2026-09-24
+
+- `pnpm test`: **148 tests passed**, 15 files.
+- `pnpm test:e2e`: **34 tests passed (1.9 minutes)** in a complete run against a fresh root production build. Chromium launched outside the macOS sandbox. TypeScript and root production build passed; no skipped tests.
+- The `/dayflow/` deployment build passed with **35 precache entries**; publication is verified separately.
+- Added browser coverage for actual translation before touch release, short-drag and touch-cancel recovery, cancellation of a pending swipe by a direct tab choice, and no horizontal document overflow. Existing gesture exclusions, filter/draft preservation, boundaries and Reduced Motion coverage remain.
+- Hygiene now uses daily counts within the shared Insights range. The duplicate card-level history action was removed; Today’s main Record history remains available.
+- Layout checks wait for the intentional panel entrance animation before measuring settled bounds. They still check page, card and date-field containment.
+- No data, schema, focus-record, icon or haptic changes. Chromium touch simulation does not establish physical iPhone smoothness or frame rate.
+
 ## Version 1.4.0 — 2026-09-24
 
 - `pnpm test`: **148 tests passed**, 15 files. The 29 new focus-record unit/integration cases cover validation, category/task links, retained names, timing precision, analytics and backup compatibility, stale save/delete protection and active-timer isolation.

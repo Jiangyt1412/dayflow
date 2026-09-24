@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.4.1 — 2026-09-24
+
+- Removed the Daily / Weekly / Monthly grouping selector from Hygiene. The Insights date-range selector is now its only time control, and the Personal care chart plots daily counts within that range.
+- Insights content now follows a horizontal finger drag. Short, cancelled and end-of-list drags return to rest; completed swipes use a brief outgoing slide/fade and a longer eased entrance. Motion is applied to the existing panel without rerendering charts on every touch event. Vertical scrolling, interactive charts, form controls, screen-edge gestures and Reduced Motion remain supported.
+- Removed the duplicate history icon from Today’s Personal care card. The page-level Record history button still opens saved records for editing.
+- No changes to stored records, backups, focus timing, app icons or vibration behavior.
+
+### Verification
+
+148 unit/integration tests across 15 files and all 34 production browser tests passed (1.9 minutes for the browser suite). TypeScript and the root production build passed. The `/dayflow/` deployment build passed with 35 precache entries. Real iPhone motion feel and frame rate have not been measured.
+
 ## 1.4.0 — 2026-09-24
 
 - Insights now opens on **Focus**, followed by **Sleep, Meals, Hygiene, Tasks and Notes**. Swipe left/right over ordinary content to switch sections, or keep using the tabs. Section filters and unsaved Notes drafts survive these switches. Controls, charts, horizontal scrolling and browser screen-edge gestures retain their own interactions; section animation respects Reduced Motion.
