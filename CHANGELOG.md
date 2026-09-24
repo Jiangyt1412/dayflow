@@ -2,6 +2,19 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.4.3 — 2026-09-24
+
+- Added a 32px gutter between Insights panels during a swipe, with each panel clipping its own content so labels and cards do not run together.
+- Resting and preview panels now use the same formatting and width. Hidden charts keep their measured layout and DOM nodes rather than collapsing to zero size. A long-to-short section transition includes the expected scroll-limit adjustment in the animation to avoid a separate landing snap.
+- Expanded section swipes to text, cards, ordinary charts, pie charts, buttons and the page heading. Taps retain their actions; a horizontal drag does not also activate the touched button or pie slice. Native editing controls, actual horizontal data scrollers, text selection, dialogs and the screen-edge navigation area keep their own gestures.
+- Removed the empty date placeholder above Focus and Notes. Date-range captions now belong to the four sections that use them.
+- Task, focus-record and other shared editor dialogs now lock the background document while open, contain scroll chaining, support nested dialogs, and restore the previous page position on close. Insights swipes also stop while a modal is open.
+- No changes to saved records, database identity, backup format, icons or haptics. Physical iPhone gesture feel and keyboard behavior remain unverified.
+
+### Verification
+
+148 unit/integration tests and all 41 production browser tests passed (1.9 minutes). TypeScript and the root production build passed. Deployment verification is recorded separately.
+
 ## 1.4.2 — 2026-09-24
 
 - Switching between Today, Tasks, Focus, Insights and Settings now replaces the current history entry while preserving the page URL and query parameters. App navigation no longer adds a browser-back step for every section. Direct links, reloads, keyboard activation and existing browser history still work. Older history entries are not erased, and this does not disable the operating system’s edge gesture.

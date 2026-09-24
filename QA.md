@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.4.3 — 2026-09-24
+
+- `pnpm test`: **148 tests passed**, 15 files.
+- `pnpm test:e2e`: **41 tests passed (1.9 minutes)** in a complete run against a fresh root production build; TypeScript passed. Chromium launched outside the macOS sandbox. No skipped tests.
+- The separate `/dayflow/` production build passed with **35 precache entries**. Publication is verified separately.
+- Inspected 390px screenshots of populated panels during swipes, plus Focus and Notes spacing; the visible gutter and removed date placeholder were confirmed.
+- New browser coverage checks swipes starting on chart SVGs, a pie-label button and the page heading, retained tap-to-open pie behavior, chart-node identity and width across a transition, vertical landing continuity from a deeply scrolled long panel into a shorter panel, and Focus/Notes spacing at 320px, 390px and 768px.
+- The drag geometry test now asserts a 32px panel gutter instead of abutting panel edges. Existing short/cancelled/reversed navigation, keyboard chart focus, offline transitions, native horizontal scrollers, form editing and Reduced Motion checks remain.
+- A new task/focus editor regression sends real Chromium touch scrolls within dialogs, checks the fixed background geometry and restores the original page scroll after closing. The initial test used the dialog title rather than the Add record button name; the selector was corrected without weakening scroll assertions.
+- No data or backup migrations. Desktop Chromium touch simulation and screenshots do not establish physical iPhone frame rate, native date-picker/keyboard behavior or complete removal of platform edge navigation.
+
 ## Version 1.4.2 — 2026-09-24
 
 - `pnpm test`: **148 tests passed**, 15 files.
