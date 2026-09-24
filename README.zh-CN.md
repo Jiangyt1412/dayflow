@@ -21,7 +21,7 @@
 
 <p align="center"><sub>无需注册 · 数据保存在本地 · 首次缓存后可离线使用</sub></p>
 
-<p align="center"><strong>版本 1.4.1</strong> · <a href="CHANGELOG.zh-CN.md">更新记录</a> · <a href="QA.md">验证报告</a></p>
+<p align="center"><strong>版本 1.4.2</strong> · <a href="CHANGELOG.zh-CN.md">更新记录</a> · <a href="QA.md">验证报告</a></p>
 
 ---
 
@@ -40,6 +40,8 @@ DayFlow 将任务计划与日常记录放进奶油白、鼠尾草绿的简洁界
 | 记录睡眠、饮食与个人护理，需要时可以编辑。                                                                                  | 在 **Insights** 选择日期范围，通过汇总与图表回顾自己记录的生活和时间分配。       |
 
 删除任务后，与它关联的已保存专注记录仍会保留。
+
+**1.4.2 更新 · 2026 年 9 月 24 日：** Insights 改为相邻页面同步移动，支持离线切换；应用栏目之间切换不再逐次增加返回记录。[查看更新详情](CHANGELOG.zh-CN.md)。
 
 **1.4.1 更新 · 2026 年 9 月 24 日：** Insights 加入跟手滑动、回弹与切页过渡；Hygiene 只保留一个日期范围选择，Today 的 Personal care 卡片标题也更简洁。[查看更新详情](CHANGELOG.zh-CN.md)。
 

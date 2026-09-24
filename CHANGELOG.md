@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.4.2 — 2026-09-24
+
+- Switching between Today, Tasks, Focus, Insights and Settings now replaces the current history entry while preserving the page URL and query parameters. App navigation no longer adds a browser-back step for every section. Direct links, reloads, keyboard activation and existing browser history still work. Older history entries are not erased, and this does not disable the operating system’s edge gesture.
+- Insights now moves the current and adjacent panels together in one continuous transition. Adjacent charts are prepared when a swipe starts, and movement uses one transform update per animation frame. Removed the sequential slide-out/fade and separate entrance animation; retained short-drag recovery, gesture exclusions, draft/filter persistence and Reduced Motion.
+- Verified Insights section swipes while offline, without document, script or stylesheet requests. This is a local interface transition, not a page download. Physical iPhone frame rate and gesture feel remain unverified.
+- No changes to saved records, database identity, backup format, app icons or haptics.
+
+### Verification
+
+148 unit/integration tests and all 36 production browser tests passed (1.7 minutes). TypeScript and the root production build passed. The separate `/dayflow/` build and publication are recorded in QA and deployment verification.
+
 ## 1.4.1 — 2026-09-24
 
 - Removed the Daily / Weekly / Monthly grouping selector from Hygiene. The Insights date-range selector is now its only time control, and the Personal care chart plots daily counts within that range.

@@ -1,5 +1,15 @@
 # Validation report
 
+## Version 1.4.2 — 2026-09-24
+
+- `pnpm test`: **148 tests passed**, 15 files.
+- `pnpm test:e2e`: **36 tests passed (1.7 minutes)** in a complete run against a fresh root production build. TypeScript passed; Chromium launched outside the macOS sandbox.
+- The separate `/dayflow/` production build passed with **35 precache entries**. Publication is verified separately.
+- New navigation coverage checks unchanged history length across all five peer sections, query/hash preservation, inline links, reloads, keyboard activation and working back/forward for existing history.
+- Swipe coverage checks adjacent panels share an edge while dragging, previews are inert and hidden from assistive technology, full opacity, short-drag and cancelled-drag recovery, a direct tab choice cancelling pending navigation, boundaries and Reduced Motion. Offline swipes are checked for no document/script/stylesheet requests.
+- All Insights panels now retain their mounted state. Chart regressions explicitly scope to the active panel; axis spacing, keyboard focus and responsive bounds are still asserted. No test is skipped.
+- No data, backup, icon or haptic change. Chromium touch simulation cannot establish physical iPhone frame rate or prove a system edge gesture is disabled. Existing browser history is deliberately preserved.
+
 ## Version 1.4.1 — 2026-09-24
 
 - `pnpm test`: **148 tests passed**, 15 files.
