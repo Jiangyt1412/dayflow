@@ -2,6 +2,16 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.1 — 2026-09-29
+
+- Sleep & wake marks late bedtimes with separate crosses. These records are excluded from the bedtime connecting line; wake times keep their usual line. Tooltips, the legend and the data table identify late bedtimes separately.
+- The display threshold follows Settings → Preferred bedtime, falling back to 00:00 when it is unset. Equality is not marked late. Clock comparisons use a noon-to-noon cycle, so after-midnight sleep follows the preceding evening and afternoon naps are not treated as late relative to an evening target. This is a chart convention based on a personal preference, not a medical definition of staying up late.
+- Changing Preferred bedtime updates the markers; sleep timestamps, durations, averages, variability and backups remain unchanged. Meals and record-history improvements from 1.5.0 remain included.
+
+### Verification
+
+156 unit/integration tests and all 46 production browser tests passed. TypeScript and the production build passed. See [QA.md](QA.md).
+
 ## 1.5.0 — 2026-09-29
 
 - Meals and Hygiene charts start on the first recorded date inside the selected range. The 7/30/90-day and custom choices remain available. Later empty dates and gaps remain visible; calendar views, summaries and average-per-day denominators still use the complete selected range. Drinks do not start the eating chart.

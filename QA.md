@@ -1,5 +1,15 @@
 # Validation report
 
+## Version 1.5.1 — 2026-09-29
+
+- `pnpm test`: **156 tests passed**, 17 files.
+- `pnpm exec playwright test`: **all 46 tests passed (2.1 minutes)** against the fresh root production build. TypeScript passed; Chromium launched outside the macOS sandbox. No skipped tests.
+- The separate `/dayflow/` deployment build passed with **35 precache entries**.
+- Inspected a 390px isolated-data screenshot: one regular bedtime dot, two late-bedtime crosses and the separate wake line are visible with correctly ordered clock positions. Physical iPhone rendering remains unverified.
+- Three new unit cases check evening/post-midnight preferences, exact thresholds, noon boundaries, the unset-preference fallback, unwrapped clock values and unchanged source/wake values.
+- A new browser regression checks default and configured thresholds, isolated cross strokes, separate table values, changed preferences, reload persistence and 320/390px bounds. Geometry assertions wait for ResponsiveContainer to finish redrawing after viewport changes rather than reading a transient detached SVG node.
+- Sleep summary calculations, duration charts, stored records and backups are unchanged. The threshold is a documented chart convention, not a medical rule. Physical iPhone rendering remains unverified.
+
 ## Version 1.5.0 — 2026-09-29
 
 - `pnpm test`: **153 tests passed**, 16 files.
