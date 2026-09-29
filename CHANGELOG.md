@@ -2,6 +2,18 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.0 — 2026-09-29
+
+- Meals and Hygiene charts start on the first recorded date inside the selected range. The 7/30/90-day and custom choices remain available. Later empty dates and gaps remain visible; calendar views, summaries and average-per-day denominators still use the complete selected range. Drinks do not start the eating chart.
+- Today → Your records now offers All, Sleep, Meals and Hygiene filters, plus an activity filter for Hygiene. Saving, cancelling or deleting a record returns to the same record list and filter. Opening an editor directly from Today still returns to Today.
+- The eating-window chart separates regular and late-night eating: a light regular-hours band, darker late-night bands, lines for first/last regular meals, and an individual cross for each late-night record. Night records never join the regular lines. The time axis runs from 00:00 at the top to 24:00 at the bottom.
+- Night classification follows Settings → late-night window (default 23:00–05:00, start included and end excluded), rather than the record's meal-type label. Custom windows also control shading. Tooltips and the data table expose regular times and every late-night time separately.
+- No database, saved-record or backup-format migration; no icon or haptic changes.
+
+### Verification
+
+153 unit/integration tests and all 45 browser tests passed. TypeScript and the production build passed. See [QA.md](QA.md) for coverage and physical-device limits.
+
 ## 1.4.3 — 2026-09-24
 
 - Added a 32px gutter between Insights panels during a swipe, with each panel clipping its own content so labels and cards do not run together.

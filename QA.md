@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.5.0 — 2026-09-29
+
+- `pnpm test`: **153 tests passed**, 16 files.
+- The final `pnpm exec playwright test` run passed **all 45 tests (2.1 minutes)** against the fresh root production build produced by `pnpm test:e2e`. TypeScript passed; Chromium launched outside the macOS sandbox. No tests skipped.
+- The separate `/dayflow/` production build passed with **35 precache entries**. Live publication is verified separately.
+- Five new analytics cases cover leading-date trimming without removing later gaps or changing denominators, empty/drink-only ranges, range boundaries, night-only days and custom non-wrapping night windows.
+- Four new browser cases exercise 7/30/90-day and custom ranges, meal-count dates, night cross positions and disconnected regular lines, 320/390/768px bounds, night-only rendering, and filtered record navigation after save/cancel/delete. Sleep editing and adding, Hygiene subtype filters, retained history scroll and direct Today editors are included.
+- A real no-night-data rendering issue found during testing was fixed by binding the night scatter series to its own value key without constraining the shared Y axis. The clock domain is also explicitly retained for night-only data; the browser regression checks both its labels and the cross’s actual geometry. Existing axis tests remain intact. A record-filter test now selects the accessible combobox explicitly. The night-only axis check targets Recharts’ foreground tick-label layer rather than the separate axis-line group; the earlier selector failure did not establish a missing visible axis.
+- Inspected isolated-data Chromium screenshots of meal shading/crosses and the filtered record dialog. Physical iPhone rendering, keyboard behavior and gesture feel remain unverified. No personal app data was used or changed by these tests.
+- No database identity, schema or backup migration.
+
 ## Version 1.4.3 — 2026-09-24
 
 - `pnpm test`: **148 tests passed**, 15 files.
