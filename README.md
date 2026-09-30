@@ -21,7 +21,7 @@
 
 <p align="center"><sub>No account required · Local data storage · Offline after setup</sub></p>
 
-<p align="center"><strong>Version 1.5.1</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
+<p align="center"><strong>Version 1.5.2</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
 
 ---
 
@@ -38,6 +38,8 @@ DayFlow brings planning and daily records together in a quiet, cream-and-sage in
 | Keep **Open** and **Completed** tasks separate. Sort by importance, add subtasks, and set optional dates, start times and deadlines. | Start a count-up timer, pause when you need to, and save each session. Link focused time to a task or keep it under a category. |
 | **Keep life in view**                                                                                                                | **See your daily rhythm**                                                                                                       |
 | Record sleep, meals and personal care alongside your plans. Edit a record when the details change.                                   | Explore **Insights** over a chosen date range, with summaries and charts drawn from your own records.                           |
+
+**New in 1.5.2 · September 30, 2026:** Sleep keeps its original line and colors, changing only late-bedtime dots to crosses. Meals gets a simpler summary and redesigned, scrollable timing chart. Returning to record history no longer outlines the dialog. [Read the release notes](CHANGELOG.md).
 
 **New in 1.5.1 · September 29, 2026:** Sleep charts mark late bedtimes with separate crosses, using your Preferred bedtime (00:00 when unset). Wake times stay connected. [Read the release notes](CHANGELOG.md).
 

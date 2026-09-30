@@ -1,5 +1,17 @@
 # Validation report
 
+## Version 1.5.2 — 2026-09-30
+
+- `pnpm test`: **156 tests passed**, 17 files.
+- `pnpm test:e2e`: **all 47 production browser tests passed (2.1 minutes)**, including its fresh TypeScript and root production build. Chromium launched outside the macOS sandbox; no skipped tests.
+- Inspected the final isolated-data Meals screenshot: muted bands, smooth regular curves, fully visible night crosses and a fixed clock scale during date scrolling. Sleep retains its original line and colors.
+- The separate `/dayflow/` deployment build passed with **35 precache entries**.
+- Dependencies were restored with the existing frozen lockfile; dependency versions were not changed.
+- Updated sleep tests assert unchanged numeric bedtimes, original line/marker color, the same connected path when the threshold changes, and unchanged bedtime/wake table values.
+- Added meal-chart coverage for the single remaining summary, smooth curves, midnight/23:59 crosses within the SVG plot, long-range horizontal touch scrolling without switching sections, final-date visibility, a fixed time rail and page containment.
+- Record-dialog coverage explicitly restores focus to the container, verifies no outline, and checks that keyboard Tab still gives a control its focus indicator.
+- Physical iPhone rendering and system gesture behavior remain unverified. No data or schema migration.
+
 ## Version 1.5.1 — 2026-09-29
 
 - `pnpm test`: **156 tests passed**, 17 files.

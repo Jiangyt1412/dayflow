@@ -2,6 +2,18 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.2 — 2026-09-30
+
+- Corrected Sleep & wake: all bedtimes stay on the original smooth line, in the original color. A late bedtime changes only from a round dot to a cross. Wake times, axes and table values are unchanged. This replaces 1.5.1's separate, disconnected late-bedtime series.
+- Meals now keeps only the Late-night eating summary above the chart. Removed the first/last eating time, total count and daily-average summary cards.
+- Redesigned the eating-window chart with cream daytime and muted lavender night bands, smooth regular-meal curves and a horizontally scrollable date canvas with a fixed left-hand time scale. Night records remain individual crosses without connecting lines. Added horizontal and vertical plot margins so midnight, 23:59 and first/last-date crosses stay fully inside the plot. Chart swipes scroll dates instead of changing Insights sections when the chart overflows.
+- Removed the native focus outline around the dialog container when returning from a record editor to Your records. Focus restoration and visible keyboard focus on controls remain.
+- No saved-record, preference-threshold, database, backup, icon or haptic changes.
+
+### Verification
+
+156 unit/integration tests and all 47 production browser tests passed (2.1 minutes). TypeScript and the root production build passed. See [QA.md](QA.md).
+
 ## 1.5.1 — 2026-09-29
 
 - Sleep & wake marks late bedtimes with separate crosses. These records are excluded from the bedtime connecting line; wake times keep their usual line. Tooltips, the legend and the data table identify late bedtimes separately.
