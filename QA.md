@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.5.5 — 2026-09-30
+
+- `pnpm test`: **156 tests passed**, 17 files.
+- `pnpm exec playwright test`: **all 48 production browser tests passed (2.2 minutes)** against a fresh TypeScript/root production build. Chromium launched outside the macOS sandbox; no skipped tests.
+- Inspected isolated-data 390px screenshots of both charts: late sleep and night meals use matching burgundy circles. The original smooth lines and night-hour bands remain.
+- Updated the descriptive calculation note after the browser run; it is included in the final deployment build.
+- The separate `/dayflow/` deployment build passed with **35 precache entries**. Dependency versions and the lockfile are unchanged from 1.5.4.
+- Existing Sleep coverage now checks burgundy highlighted circles, unchanged connected curves and table values, configurable thresholds, reload and responsive bounds.
+- Meal coverage checks burgundy circles within plot bounds at midnight/23:59 and first/last dates; the 1.5.4 date-matching, keyboard and refresh regression remains included.
+- Physical iPhone rendering remains unverified.
+
 ## Version 1.5.4 — 2026-09-30
 
 - `pnpm test`: **156 tests passed**, 17 files.
