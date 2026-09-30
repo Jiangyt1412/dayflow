@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.5.4 — 2026-09-30
+
+- `pnpm test`: **156 tests passed**, 17 files.
+- `pnpm test:e2e`: **all 48 production browser tests passed (2.2 minutes)**, with a fresh TypeScript and root production build. Chromium launched outside the macOS sandbox; no skipped tests.
+- Inspected the final 390px isolated-data screenshot: a wider full-range chart and Sep 30 tooltip with that day’s 16:40 meal.
+- Dependency versions and the lockfile are unchanged from 1.5.3; the lockfile matches byte for byte.
+- The separate `/dayflow/` deployment build passed with **35 precache entries**.
+- Reproduced the old mismatch with isolated synthetic records: touching Sep 18 showed Sep 17. The new regression compares every regular point with its own data-table row and checks touches on empty dates, night-only dates and night markers, sequential keyboard dates and reload.
+- Geometry checks compare the actual SVG plot width with Sleep and verify the full date span uses the same 16px padding. Existing responsive, range, night-edge and no-overflow checks remain.
+- Physical iPhone rendering remains unverified.
+
 ## Version 1.5.3 — 2026-09-30
 
 - `pnpm test`: **156 tests passed**, 17 files.

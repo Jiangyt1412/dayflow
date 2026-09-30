@@ -2,6 +2,16 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.4 — 2026-09-30
+
+- Meals uses the same horizontal chart margins and date-axis padding as Sleep, giving the curves and markers more width without adding horizontal scrolling.
+- Fixed a real date-tooltip mismatch: a sparse night-only Scatter dataset could clamp the active date index, making later dates repeatedly show an earlier day's records. Night crosses now use reference marks on the shared full-date axis; the tooltip resolves records from that axis date.
+- Date tooltips remain visible for night-only days and days with no regular meals. Night markers, regular points and empty date positions all use that day's records. Smooth curves, Sleep-matching colors, white dashed backing and gray night bands remain.
+
+### Verification
+
+156 unit/integration tests and all 48 production browser tests passed (2.2 minutes). TypeScript and the root production build passed. See [QA.md](QA.md).
+
 ## 1.5.3 — 2026-09-30
 
 - Meals timing now fits the complete selected date range into the card without horizontal chart scrolling. The 7/30/90-day, all-time and custom ranges remain available; regular-meal curves remain smooth.
