@@ -21,7 +21,7 @@
 
 <p align="center"><sub>无需注册 · 数据保存在本地 · 首次缓存后可离线使用</sub></p>
 
-<p align="center"><strong>版本 1.5.2</strong> · <a href="CHANGELOG.zh-CN.md">更新记录</a> · <a href="QA.md">验证报告</a></p>
+<p align="center"><strong>版本 1.5.3</strong> · <a href="CHANGELOG.zh-CN.md">更新记录</a> · <a href="QA.md">验证报告</a></p>
 
 ---
 
@@ -40,6 +40,8 @@ DayFlow 将任务计划与日常记录放进奶油白、鼠尾草绿的简洁界
 | 记录睡眠、饮食与个人护理，需要时可以编辑。                                                                                  | 在 **Insights** 选择日期范围，通过汇总与图表回顾自己记录的生活和时间分配。       |
 
 删除任务后，与它关联的已保存专注记录仍会保留。
+
+**1.5.3 更新 · 2026 年 9 月 30 日：** Meals 取消图内横滑，使用与 Sleep 相同的平滑线色、白底虚线、灰色夜宵区和深灰叉号；提示框明确显示该日是否有夜宵记录。[查看更新详情](CHANGELOG.zh-CN.md)。
 
 **1.5.2 更新 · 2026 年 9 月 30 日：** Sleep 保留原连线和颜色，只改变较晚入睡的点形状；Meals 精简摘要、重做可横滑的时间图；修复返回记录列表的弹窗焦点框。[查看更新详情](CHANGELOG.zh-CN.md)。
 

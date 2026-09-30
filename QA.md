@@ -1,5 +1,15 @@
 # Validation report
 
+## Version 1.5.3 — 2026-09-30
+
+- `pnpm test`: **156 tests passed**, 17 files.
+- `pnpm test:e2e`: **all 47 production browser tests passed (2.2 minutes)**, with a fresh TypeScript and root production build. Chromium launched outside the macOS sandbox; no skipped tests.
+- Inspected the final 390px isolated-data Meals screenshot: white/dashed backing, Sleep-matching smooth lines, gray night hours and fully visible dark-gray crosses.
+- Dependency versions and the lockfile are unchanged from 1.5.2; the lockfile matches byte for byte.
+- The separate `/dayflow/` deployment build passed with **35 precache entries**.
+- Meal regression covers smooth curves, Sleep-matching line colors, white background and gray night markers, all date presets at 320/390/768px, contained midnight/23:59 crosses, no chart overflow and explicit empty/nonempty night tooltips.
+- Physical iPhone rendering remains unverified.
+
 ## Version 1.5.2 — 2026-09-30
 
 - `pnpm test`: **156 tests passed**, 17 files.

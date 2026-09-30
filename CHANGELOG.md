@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.3 — 2026-09-30
+
+- Meals timing now fits the complete selected date range into the card without horizontal chart scrolling. The 7/30/90-day, all-time and custom ranges remain available; regular-meal curves remain smooth.
+- Matched Sleep's purple and warm yellow-brown line colors. The chart has a white background and dashed grid; only the configured late-night hours are shaded gray, with dark-gray crosses for each night record.
+- Replaced the ambiguous “Late-night × · —” tooltip row with “Late-night meals · No records” when that date has none, or the recorded times when it does. The legend and hint explain the cross and shaded hours.
+- Retained plot padding so midnight, 23:59 and first/last-date crosses stay inside the chart. The standard clock axis replaces the former fixed scrolling rail.
+
+### Verification
+
+156 unit/integration tests and all 47 production browser tests passed (2.2 minutes). TypeScript and the root production build passed. See [QA.md](QA.md).
+
 ## 1.5.2 — 2026-09-30
 
 - Corrected Sleep & wake: all bedtimes stay on the original smooth line, in the original color. A late bedtime changes only from a round dot to a cross. Wake times, axes and table values are unchanged. This replaces 1.5.1's separate, disconnected late-bedtime series.
