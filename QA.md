@@ -1,5 +1,17 @@
 # Validation report
 
+## Version 1.5.6 — 2026-10-01
+
+- **157 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
+- **All 49 production browser tests passed (2.3 minutes)** against the final fresh TypeScript/root production build. Chromium launched outside the macOS sandbox; no skipped tests.
+- Added unit coverage for intermediate meals, sorted and duplicate regular times, night exclusions and drink exclusions. Configurable wrapping/non-wrapping night windows, leading empty dates, late-only dates and original daily denominators remain covered.
+- New browser geometry checks verify a short horizontal mark for every regular meal; only each day's first/last regular marks are joined vertically. Intermediate and duplicate times, a single-meal date and a night-only date are included. Touch tooltips and the data table expose all regular meal times.
+- Existing chart regressions now check smaller 5px burgundy dots, continued Sleep paths/values, all Meal range presets, white backing and contained boundary dots at 320/390/768px. The full date-tooltip regression still checks regular, empty and night-only dates, keyboard navigation and reload. Its reference-marker lookup now uses the date key because keyed SVG layers can retain a different DOM order after range changes.
+- Thin meal marks have transparent hit regions without enlarging their visible strokes. Coincident meal times retain separate source entries at their shared visual location.
+- Inspected isolated-data 390px Meal/Sleep screenshots for the muted palette, reduced markers, daily meal windows and retained Sleep curves. Physical iPhone appearance and touch feel remain unverified.
+- Final checks used the already-installed Vitest, TypeScript, Vite and Playwright CLIs directly, matching the project scripts' tools. An earlier pnpm launcher invocation attempted dependency staging and returned a missing staging-directory error; no dependency version or lockfile changes were made. Compared both dependency sections and the lockfile with the previous source archive.
+- The separate `/dayflow/` deployment build passed with **35 precache entries**. Live publication is verified separately. No database or backup-format migration.
+
 ## Version 1.5.5 — 2026-09-30
 
 - `pnpm test`: **156 tests passed**, 17 files.

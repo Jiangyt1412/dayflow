@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.6 — 2026-10-01
+
+- Reduced late-bedtime and late-night meal dots from 8px to 5px in diameter. Sleep and Meals now share muted mauve, warm brown and soft burgundy accents, with pale gray night-hour bands.
+- Replaced Meals' cross-date curves with individual horizontal marks for every regular meal. A thin vertical line joins each day's earliest and latest regular meal. Intermediate meals are included; a single-meal day has one mark and no connector. Night meals remain small independent dots and never extend a regular eating window.
+- Marks narrow in dense date ranges. Kept the full-range layout, white background, dashed grid, forward clock axis, configurable night hours and accurate date-based touch/keyboard tooltips. The tooltip and data table now include every regular meal time.
+- Sleep retains its smooth connected paths, timestamps, thresholds and calculations. No saved-data or backup migration; dependency versions and the lockfile are unchanged.
+
+### Verification
+
+157 unit/integration tests and all 49 production browser tests passed (2.3 minutes). TypeScript and the production builds passed. See [QA.md](QA.md).
+
 ## 1.5.5 — 2026-09-30
 
 - Sleep's late-bedtime markers and Meals' late-night markers are now burgundy round dots (#843b4a), replacing the crosses. Regular points and their smooth connected lines keep their existing colors.
