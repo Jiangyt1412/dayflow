@@ -1,5 +1,14 @@
 # Validation report
 
+## Version 1.5.7 — 2026-10-15
+
+- **157 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
+- The targeted **production PWA/offline browser test passed**, covering the manifest, all cached routes and offline record edits. TypeScript and root production build passed. No app behavior changed; the last complete 49-test browser run remains the 1.5.6 run below.
+- Inspected the generated 180px iPhone icon. The supplied image is retained in `design/app-icon-source.png`; nearest-neighbor resizing preserves pixel-art edges and the complete composition.
+- Verified the four required icon sizes, PNG opacity, byte-identical generic/v1/v2 compatibility aliases, new manifest icon URLs, and unchanged manifest start URL/scope. Browser/favicon/iPhone references all use the new artwork.
+- The separate `/dayflow/` build passed with **44 precache entries**. Dependency versions and the lockfile are unchanged from the prior source archive. Runtime records, database name and backup format are unchanged.
+- No physical iPhone testing was performed. Website publication and offline caching do not establish that iOS has refreshed an existing Home Screen icon. Documentation gives a backup-first procedure for adding a new copy, without assuming Safari and standalone apps share records.
+
 ## Version 1.5.6 — 2026-10-01
 
 - **157 unit/integration tests passed**, 17 files, using the installed Vitest CLI.

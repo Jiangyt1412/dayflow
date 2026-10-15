@@ -2,6 +2,16 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.5.7 — 2026-10-15
+
+- Replaced the app icon with the supplied pixel-art study illustration, preserving its full square composition and pixel edges. Generated 180px iPhone, 192px and 512px PWA, 512px maskable, and 64px favicon assets.
+- HTML and the manifest use new `pixel-study-v3` icon URLs. All existing generic, `graduate-v1` and `graduate-v2` icon URLs also serve the new image for older pages.
+- App name, site address, manifest start URL/scope, database and backup formats are unchanged. This updates the website assets; it cannot guarantee that iOS will replace an already-saved Home Screen icon. Export a backup from the original app before adding a new copy, retain the original until records are verified, and import the JSON backup into the new copy if needed.
+
+### Verification
+
+157 unit/integration tests and the targeted production PWA/offline browser regression passed. TypeScript and production builds passed. Checked icon dimensions, opacity, legacy aliases and manifest URLs. Physical iPhone icon refresh is not verified; the last full 49-test browser suite passed in 1.5.6. See [QA.md](QA.md).
+
 ## 1.5.6 — 2026-10-01
 
 - Reduced late-bedtime and late-night meal dots from 8px to 5px in diameter. Sleep and Meals now share muted mauve, warm brown and soft burgundy accents, with pale gray night-hour bands.
