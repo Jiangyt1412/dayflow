@@ -2,6 +2,18 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.6.0 — 2026-10-16
+
+- Replaced Sleep & wake curves with one muted-mauve interval for every completed sleep session. Multiple sleeps on the same wake date share a column; awake gaps remain empty. Equal-duration sessions are both shown, and overlapping entries use separate lanes without editing or removing the source records.
+- Preferred bedtime is now a single thin gray dashed reference. Axis colors stay unchanged. No late-bedtime red dots, automatic main-sleep classification or default midnight threshold. An unset Preferred bedtime produces no target line.
+- Sleep summaries now distinguish Average daily sleep, Recorded days and Sleep sessions. Daily totals exclude awake gaps and count overlapping time once. Duration keeps its line chart using a single total per wake date; missing dates break the line rather than implying zero sleep. Daily averages use dates with completed records.
+- Dates remain grouped by waking, including sessions starting on the preceding day. Overlap attribution goes to the earlier-ending record before applying a date filter, keeping totals stable across ranges. The timing domain expands for long or late sessions; day offsets, actual timestamps, individual durations and counted contributions are available in the tooltip/table. Durations use elapsed time across clock changes.
+- Retained the app's existing card style, spacing, muted plum palette, date ranges, keyboard/touch tooltips, offline behavior and pixel-art icon. No database or backup-format migration; dependency versions and lockfile are unchanged.
+
+### Verification
+
+166 unit/integration tests and all 52 production browser tests passed (2.4 minutes). TypeScript and production builds passed. See [QA.md](QA.md).
+
 ## 1.5.7 — 2026-10-15
 
 - Replaced the app icon with the supplied pixel-art study illustration, preserving its full square composition and pixel edges. Generated 180px iPhone, 192px and 512px PWA, 512px maskable, and 64px favicon assets.

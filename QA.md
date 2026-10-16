@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.6.0 — 2026-10-16
+
+- **166 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
+- **All 52 production browser tests passed (2.4 minutes)** against the final fresh TypeScript/root production build. Chromium launched outside the macOS sandbox; no skipped tests. The installed CLIs are the same tools used by the project scripts.
+- Replaced the former late-dot tests with interval/target-reference coverage. New unit cases cover split and equal-duration sleep, awake gaps, duplicate/nested/chained overlaps, lane reuse, wake-date filtering, range-stable cross-date attribution, missing-day denominators, invalid/incomplete records, long domains, evening/morning/unset targets and actual elapsed durations across offset changes. A separate minute-by-minute union oracle checks unordered overlapping records.
+- New browser cases inspect interval geometry and awake gaps, verify daily totals versus individual durations, check equal sleeps and parallel overlap lanes, verify 7/30/90/all/custom ranges at 320/390/768px, ensure long/late sessions stay inside the chart, and exercise date tooltips, keyboard selection and reload. Exported sleep records remain exactly equal to the imported originals, including an incomplete session.
+- The target-reference regression checks a 1px gray dashed line, no fallback when unset, no sleep circles/red markers, preference changes without moving the bars, persistence after reload, and clearing the reference. Axis spacing, pointer/keyboard focus and existing Meal/PWA/swipe/task/focus/backup regressions remain included.
+- Inspected the final isolated-data 390px screenshot: muted-mauve intervals, retained cream chart card, original neutral axis colors, a gray bedtime reference, an awake gap and separate overlap lanes. The shorter caption and target z-order are included in the complete test run.
+- The separate `/dayflow/` build passed with **44 precache entries**. Dependency sections and lockfile match the prior 1.5.7 source archive. No database, stored-record, app identity, icon or backup migration.
+- Physical iPhone rendering and touch feel remain unverified. Timing bars follow local clock positions; durations use real elapsed milliseconds. Minimum 3px bar height keeps brief or clock-change entries visible; exact source timestamps and durations remain available in the tooltip/table. Sleep totals are assigned by wake date, not clipped to natural calendar days.
+
 ## Version 1.5.7 — 2026-10-15
 
 - **157 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
