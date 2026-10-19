@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.6.1 — 2026-10-19
+
+- Unified page gutters, title-row alignment, card insets and section spacing across Today, Tasks, Focus, Insights and Settings. Wide layouts are centered in the area beside the sidebar; phone layouts retain safe-area padding.
+- Aligned task-editor titles, sticky header actions and form fields to shared left/right edges. Close and Save retain their separate touch targets and the existing action order. Date/time controls keep their native pickers and fit within their containers.
+- Removed the desktop Focus timer card's stretch to the height of a long session list. Its height now follows its own content, while the history and its footer actions remain independently arranged.
+- Coordinated the Daily Log clocks, Focus filter/date controls, chart-card headings and Notes card spacing using shared responsive spacing values. Existing palette, typography, chart calculations, stored records, icon and offline behavior are retained. Dependency versions and the lockfile are unchanged.
+
+### Verification
+
+166 unit/integration tests and all 54 production browser tests passed (2.4 minutes). TypeScript and production builds passed. New regressions cover shared page edges, centered wide layouts, aligned modal gutters and the independent height of the Focus timer card. See [QA.md](QA.md).
+
 ## 1.6.0 — 2026-10-16
 
 - Replaced Sleep & wake curves with one muted-mauve interval for every completed sleep session. Multiple sleeps on the same wake date share a column; awake gaps remain empty. Equal-duration sessions are both shown, and overlapping entries use separate lanes without editing or removing the source records.

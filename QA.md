@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.6.1 — 2026-10-19
+
+- **166 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
+- **All 54 production browser tests passed (2.4 minutes)** against the fresh TypeScript/root production build. Chromium launched outside the macOS sandbox; no skipped tests.
+- Added a geometry regression at 320, 390, 768, 1440 and 1920px: visible page headers and leading content share an edge, title rows share a vertical center, wide content is centered beside the sidebar, and dialog titles, fields and Save align to common gutters. It checks that Close and Save retain separate targets.
+- Added a populated desktop Focus regression with 20 saved sessions: the list and timer start at the same top edge, the history remains independently taller, and Start focus and the timer card bottom stay close to the timer form.
+- Existing responsive, chart width/axis, pointer/keyboard focus, nested editor scroll lock, animation, swipe, timer, record, backup, offline PWA and sleep interval tests all remain included.
+- Inspected isolated development-demo screenshots of all five routes and Sleep, Meals, Notes and the task editor at 390 and 1440px. Shared title alignment and card insets, aligned Sleep clocks, matching editor gutters and the removal of the stretched Focus card are visible. An initial development server did not observe filesystem edits; it was restarted before the final screenshots and production test build.
+- The `/dayflow/` deployment build uses **44 precache entries**. Dependency sections and the lockfile match the prior 1.6.0 source archive. No database, record, icon, backup-format or calculation changes.
+- Physical iPhone rendering and touch feel remain unverified. Browser geometry and responsive tests cover the listed viewport sizes; they do not constitute a physical-device test.
+
 ## Version 1.6.0 — 2026-10-16
 
 - **166 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
