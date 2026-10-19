@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.7.1 — 2026-10-19
+
+- Opening task, category, life-record and focus-record editors now leaves focus on Close. Removed text-field autofocus so typing or native date/time pickers begin only after the user chooses a field. Keyboard Tab navigation and unsaved-change protection remain available.
+- Increased the gap between the Tasks Sort label and its selector from 9px to 16px, retaining wrapping at narrow widths.
+- Added an opaque, non-interactive top safe-area strip and 16px more heading clearance in mobile standalone mode while the document is at the top. The strip disappears after scrolling. No top blur exists in the application CSS; this is a layout mitigation for a possible native WebKit scroll-edge effect, not a claim that the iPhone issue has been physically reproduced or eliminated.
+- Replaced the GitHub introduction's old artwork with the current pixel-art icon and actual 1.7.1 screenshots, plus a silent interaction video and animated README preview. English remains primary with a Chinese companion; historical updates move to the changelog.
+
+### Verification
+
+166 unit/integration tests and all 65 production browser tests passed (2.7 minutes). TypeScript and production builds passed. Added standalone top/scroll-state geometry, Sort spacing across 320–1440px and editor focus/keyboard coverage. Physical iPhone status-bar rendering and native keyboard/picker behavior remain unverified. Dependencies, lockfile, database and backup format are unchanged. See [QA.md](QA.md).
+
 ## 1.7.0 — 2026-10-19
 
 - Audited the running product in three passes: complete workflows, visual/mobile quality, then animation and state feedback. Re-ran the core workflows after fixes using isolated synthetic records and captured matching desktop/mobile before-and-after screenshots.

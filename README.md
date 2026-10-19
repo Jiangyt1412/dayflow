@@ -1,115 +1,75 @@
 <p align="center">
   <a href="https://jiangyt1412.github.io/dayflow/">
-    <img src="docs/media/hero-v2.jpg" alt="DayFlow — Find your daily rhythm. A cream and sage campaign illustration featuring the graduation-themed app icon." width="100%">
+    <img src="docs/media/hero-v171.png" alt="DayFlow 1.7.1: current pixel-art icon, Open tasks and a task-linked Focus timer, in a cream and sage layout." width="100%">
   </a>
 </p>
 
 <h1 align="center">A little more clarity, every day.</h1>
 
-<p align="center">
-  A calm space for your tasks, focused time, and everyday routines.<br>
-  Open it in your browser. Make it part of your day.
-</p>
+<p align="center">A calm, local-first space for your tasks, focused time and everyday rhythms.</p>
 
 <p align="center">
   <a href="https://jiangyt1412.github.io/dayflow/"><strong>Open DayFlow ↗</strong></a>
   &nbsp; · &nbsp;
-  <a href="#make-yourself-at-home">Get started</a>
+  <a href="#see-dayflow-in-motion">Watch the demo</a>
   &nbsp; · &nbsp;
   <a href="README.zh-CN.md">简体中文</a>
 </p>
 
-<p align="center"><sub>No account required · Local data storage · Offline after setup</sub></p>
+<p align="center"><sub>No account required · Offline after setup · No automatic cloud sync</sub></p>
+<p align="center"><strong>Version 1.7.1</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
 
-<p align="center"><strong>Version 1.7.0</strong> · <a href="CHANGELOG.md">What’s new</a> · <a href="QA.md">Validation</a></p>
+## See DayFlow in motion
 
----
+Complete a task, run a Focus session, explore a category’s tasks, review split sleep and save a note. This is the current application being operated with synthetic records.
 
-## Your day, in one place
+[![Animated preview of real DayFlow operations: task completion, focus timer and category-to-task pie.](docs/media/dayflow-demo-v171.gif)](https://github.com/Jiangyt1412/dayflow/blob/main/docs/media/dayflow-demo-v171.mp4)
 
-DayFlow brings planning and daily records together in a quiet, cream-and-sage interface. Choose what matters, give it your attention, and look back on the time you have spent.
+<p align="center"><a href="https://github.com/Jiangyt1412/dayflow/blob/main/docs/media/dayflow-demo-v171.mp4"><strong>Full demo · MP4 ↗</strong></a><br><sub>Actual app recording · Synthetic demo records · No audio</sub></p>
 
-![Illustrated preview of the DayFlow task editor, sleep records and Insights, with synthetic demo data.](docs/media/product-preview-v2.jpg)
+## From plans to perspective
 
-<p align="center"><sub>Illustrated product preview · Demo data</sub></p>
+![Actual DayFlow 1.7.1 screens: prioritized tasks, a running task-linked timer and a category pie with connected time labels.](docs/media/product-showcase-v171.png)
 
-| Plan with intention                                                                                                                  | Make room for focus                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Keep **Open** and **Completed** tasks separate. Sort by importance, add subtasks, and set optional dates, start times and deadlines. | Start a count-up timer, pause when you need to, and save each session. Link focused time to a task or keep it under a category. |
-| **Keep life in view**                                                                                                                | **See your daily rhythm**                                                                                                       |
-| Record sleep, meals and personal care alongside your plans. Edit a record when the details change.                                   | Explore **Insights** over a chosen date range, with summaries and charts drawn from your own records.                           |
+| Plan what matters | Give it your focus | See where time goes |
+| --- | --- | --- |
+| Separate **Open** and **Completed** tasks. Set priorities, subtasks and optional dates. Keep unsaved edits safe. | Link a task, start, pause, resume and finish. Add missed sessions or correct saved records. | Explore categories and task pies, time-of-day patterns and longer trends over your chosen range. |
 
-**New in 1.7.0 · October 19, 2026:** A three-pass product audit improves safe editing, multi-period sleep totals, filter recovery, mobile Notes and clear loading/saving/error feedback. [Read the release notes](CHANGELOG.md).
+## Leave room for your rhythm
 
-**New in 1.6.1 · October 19, 2026:** Shared page edges, card and form insets, aligned editor actions and a content-sized Focus timer card. [Read the release notes](CHANGELOG.md).
+![Current sleep interval chart with two separate periods on one wake date and a subtle target line, beside Notes with mood and journal history.](docs/media/daily-rhythm-v171.png)
 
-**New in 1.6.0 · October 16, 2026:** Every sleep session gets its own interval. A subtle gray bedtime target, clear wake-date daily totals and separate lanes for overlaps replace the old timing curves and red dots. [Read the release notes](CHANGELOG.md).
+Every completed sleep period has its own interval, including multiple sleeps on one wake date. Awake gaps stay visible, overlapping time is counted once in daily totals, and your target bedtime is a quiet gray reference.
 
-**New in 1.5.7 · October 15, 2026:** A new pixel-art study icon, with fresh iPhone/PWA/favicon assets and compatibility URLs. Home Screen icon refresh on iOS is not guaranteed; back up before adding a new copy. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.6 · October 1, 2026:** Smaller night dots and a softer coordinated palette. Meals now plots each meal as a short mark, joined vertically within each regular eating day; night meals stay separate. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.5 · September 30, 2026:** Late-bedtime and late-night meal markers now use matching burgundy dots. Smooth lines, gray night hours and accurate date tooltips remain. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.4 · September 30, 2026:** Meals gains the same plotting width as Sleep and fixes date tooltips that could repeat an earlier day. Regular points, night crosses and empty dates now show the selected day’s records. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.3 · September 30, 2026:** Meals fits your selected range without chart scrolling, with Sleep-matching smooth lines, a white dashed grid, gray night hours and dark-gray crosses. Clearer tooltips explain dates with no night meals. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.2 · September 30, 2026:** Sleep keeps its original line and colors, changing only late-bedtime dots to crosses. Meals gets a simpler summary and redesigned, scrollable timing chart. Returning to record history no longer outlines the dialog. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.1 · September 29, 2026:** Sleep charts mark late bedtimes with separate crosses, using your Preferred bedtime (00:00 when unset). Wake times stay connected. [Read the release notes](CHANGELOG.md).
-
-**New in 1.5.0 · September 29, 2026:** Meals and Hygiene charts start with your first record in the selected range. Filter Today’s history by record type and return to your list after editing. See regular meal times and late-night eating separately, with shaded hours and night crosses. [Read the release notes](CHANGELOG.md).
-
-**New in 1.4.3 · September 24, 2026:** More breathing room between Insights pages, stable chart transitions, swipes across charts and cards, cleaner Focus/Notes spacing, and editors that keep the background still. [Read the release notes](CHANGELOG.md).
-
-**New in 1.4.2 · September 24, 2026:** Insights panels now slide together in a continuous transition, including offline. Moving between app sections no longer adds a browser-back step each time. [Read the release notes](CHANGELOG.md).
-
-**New in 1.4.1 · September 24, 2026:** Insights follows your swipe with an eased return or section transition. Hygiene uses one date-range selector, and Today’s Personal care card has a simpler header. [Read the release notes](CHANGELOG.md).
-
-**New in 1.4.0 · September 24, 2026:** Swipe through **Insights**, with **Focus** first and **Notes** last. Missed the timer? Use **Focus → Recent sessions → Add record**, or open a saved session to correct its start, duration, category, task and note. Tap **Save** to keep your changes. [Read the release notes](CHANGELOG.md).
-
-A manual record is one continuous focus period. Editing a saved start time or duration replaces its original intervals and removes pauses; the editor warns before saving. Changing only the category, task or note preserves the recorded timing. The active timer is unaffected.
-
-**Introduced in 1.3.1:** Tap a category to move smoothly into a new pie of its tasks, with connected time and percentage labels. Return with **All categories**. Focus durations of an hour or more now use hours and minutes, and the first task no longer has an extra divider above it. [Read the release notes](CHANGELOG.md).
-
-**Introduced in 1.3.0:** A moving mobile navigation highlight, clear save/timer feedback and gentle editor transitions. Tap a category slice to explore task-by-task focus time. Swipe a task left to reveal Delete, then tap to delete; Undo the latest task action within 10 seconds.
-
-**Introduced in 1.2.1:** Choose 7, 30 or 90 days, all time or custom dates for the Focus category pie. Sleep and meal timelines now read from earlier at the top to later at the bottom, with clearer axis spacing and no blue tap outline.
-
-**Introduced in 1.2.0:** Write a daily note and record your mood in **Insights → Notes**. In **Focus**, see four time totals, a category pie chart, a 24-hour distribution and daily/yearly trends.
-
-Saved focus sessions show their linked task name and remain in your history when you delete the task. Names of tasks already deleted before this version cannot be recovered from missing data.
+Record meals and personal care too. In **Insights → Notes**, write a few words, record your mood and return to earlier entries.
 
 ## Make yourself at home
 
-1. **Open [DayFlow](https://jiangyt1412.github.io/dayflow/).** No account or installation is needed to use the website.
-2. **Add your first task.** Create a category in **Settings**, then choose **Tasks → Add task** and **Save task**. In **Focus**, select that category to start a session; give the task the same category if you want to link it.
-3. **Take it to your Home Screen.** On iPhone, open the site in Safari, choose **Share → Add to Home Screen**, and enable **Open as Web App** if that option appears. See [Apple’s guide](https://support.apple.com/en-nz/guide/iphone/iphea86e5236/ios).
+1. **[Open DayFlow](https://jiangyt1412.github.io/dayflow/).** Create a category in **Settings**, then add your first task.
+2. **Try a Focus session.** Choose a category, optionally link a task, and start. Saved sessions keep the task name even after its task is deleted.
+3. **Add it to your iPhone Home Screen.** In Safari, choose **Share → Add to Home Screen**. Open it online and wait for **Settings → Ready to work offline**.
 
-Open the app online first, then check **Settings** for **Ready to work offline**. Once the app has cached, you can keep recording without a connection. The app interface is currently in English.
+The interface is in English. **Settings → Check for updates** checks for a newer app; follow the update prompt when one is available.
 
-## Your records, on your device
+## Your records stay on your device
 
-DayFlow stores records locally in the browser or installed app you are using. **There is no account or automatic cloud sync.** Another device, browser, or Home Screen installation may have a separate set of records.
+Records are stored locally in the browser or installed app you use. **There is no account or automatic cloud sync.** Different devices, browsers or Home Screen installations may hold separate records.
 
-- **Export backup** saves a full JSON backup, including saved journal entries. Keep a copy periodically and before moving to another installation.
-- **Import backup** validates that JSON file and, after confirmation, **replaces the current local data**. It does not merge two sets of records.
-- **Export CSV** provides selected records for spreadsheets; it is not a full backup.
+- **Export backup:** a complete JSON backup, including saved Notes. Keep a copy periodically and before moving to another installation.
+- **Import backup:** validates that JSON and, after confirmation, **replaces** current local records. It does not merge two sets of data.
+- **Export CSV:** selected records for spreadsheets; it is not a full backup.
 
-Backup files are readable, unencrypted files. Keep them somewhere you trust. Clearing website data can remove local records.
+Backups are readable, unencrypted files. Clearing website data can remove local records.
 
 <details>
-<summary><strong>About this repository</strong></summary>
+<summary><strong>About this repository and media</strong></summary>
 
-This repository hosts the published DayFlow web build and its product documentation on GitHub Pages. It is not the editable application source project.
+This repository hosts the published static web build and product documentation on GitHub Pages. The editable source project is maintained separately. The application uses **React, TypeScript, Vite, Dexie / IndexedDB and Recharts**.
 
-The application is built with **React, TypeScript and Vite**, with **Dexie / IndexedDB** for local storage and **Recharts** for charts.
+The images above combine current application screenshots with a designed layout. The video records actual interactions; all illustrated records are synthetic. The pixel-art icon was supplied by the project owner. See [media notes](docs/media/README.md) for provenance and formats.
 
-Campaign artwork is AI-assisted. Product illustrations are based on the app with synthetic demo data; small visual details may differ from the live interface.
+Release history belongs in the [changelog](CHANGELOG.md). The latest validation and physical-device limits are documented in [QA.md](QA.md).
 
 </details>
-
----
 
 <p align="center"><strong>Find your daily rhythm.</strong><br><a href="https://jiangyt1412.github.io/dayflow/">Start with today ↗</a></p>

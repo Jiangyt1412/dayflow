@@ -1,5 +1,15 @@
 # Validation report
 
+## Version 1.7.1 — 2026-10-19
+
+- **166 unit/integration tests passed**, 17 files. **All 65 production browser tests passed (2.7 minutes)** against the fresh TypeScript/root production build. No skipped tests; existing installed CLIs were used.
+- Two new regressions verify opaque top protection in simulated iOS standalone mode, state changes after scrolling away/back, weekday clearance, a minimum 16px Sort gap at 320/390/768/1440px, and editor opening without focusing text/date/time fields. Keyboard Tab still reaches the category input. Existing audit expectations now require Close focus instead of input autofocus.
+- Task/category explicit autofocus was removed. The shared modal opens on its Close button, preserving native focus containment, keyboard access, closing animations and dirty-form confirmation.
+- The application has no CSS blur at the top; only bottom navigation uses backdrop blur. An iPhone-native scroll-edge effect is a plausible explanation, not a confirmed cause on the user's device. The top opaque inset and extra standalone heading clearance are a mitigation. WebKit describes native scroll-edge behavior in [296485@main](https://results.webkit.org/commit?uuid=175056451300).
+- The `/dayflow/` build uses 44 precache entries. Dependency sections and lockfile match 1.7.0 byte-for-byte. No database, backup, icon or stored-time migration.
+- Current promotional images use real production screenshots and synthetic records. The silent video records real task, timer, pie, sleep and Notes interactions. Media were inspected separately from application regressions.
+- Physical iPhone status-bar blur, keyboard/picker presentation and haptics remain unverified. Simulating `navigator.standalone` verifies application layout only; it cannot validate native iOS rendering.
+
 ## Version 1.7.0 — 2026-10-19
 
 - **166 unit/integration tests passed**, 17 files, using the existing installed Vitest CLI.
