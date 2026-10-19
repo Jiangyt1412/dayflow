@@ -2,6 +2,21 @@
 
 [简体中文](CHANGELOG.zh-CN.md) · [Open DayFlow](https://jiangyt1412.github.io/dayflow/)
 
+## 1.7.0 — 2026-10-19
+
+- Audited the running product in three passes: complete workflows, visual/mobile quality, then animation and state feedback. Re-ran the core workflows after fixes using isolated synthetic records and captured matching desktop/mobile before-and-after screenshots.
+- Protected unsaved task, life-record, focus-record and category edits on Close, Escape, Cancel and backdrop dismissal; unchanged/reverted forms close normally, successful saves still close without a prompt. Editors focus the first form field after opening. Internal dialog padding no longer acts as the backdrop, and nested confirmations no longer inherit doubled header/body insets.
+- Today now uses the same wake-date sleep totals and overlap attribution as Insights. Multiple periods remain distinguishable from the latest period, with direct Add sleep and filtered history actions.
+- Task searches trim surrounding whitespace and offer Clear filters when results are empty or a filter remains active. Clearing preserves Open/Completed selection.
+- Prevented stale import errors from appearing in unrelated dialogs. Errors remain readable until dismissed or replaced, notifications have an explicit keyboard/touch close button, and preference validation appears inline with real saving/saved feedback.
+- Reduced unused Notes space, aligned mobile date fields, unified its primary actions, expanded category controls to 44px touch regions, and made phone backup buttons full-width. Retained existing typography, colors, chart calculations and icon.
+- Scoped Insights loading and failure to its own panel: pending modules no longer block other routes, and failed loads retain navigation with a reload action instead of replacing the app with a misleading storage error.
+- Added restrained loading skeletons, Running/Paused state styling and brief fades for disclosures, tabs, save results, errors and entry states. Reduced Motion disables added animation. Native select menus retain system behavior. No dependencies, database schema or backup format changed.
+
+### Verification
+
+166 unit/integration tests and all 63 production browser tests passed (2.6 minutes), including nine new audit regressions. TypeScript and production builds passed. No tests skipped. See [QA.md](QA.md) for evidence and physical-device limits.
+
 ## 1.6.1 — 2026-10-19
 
 - Unified page gutters, title-row alignment, card insets and section spacing across Today, Tasks, Focus, Insights and Settings. Wide layouts are centered in the area beside the sidebar; phone layouts retain safe-area padding.

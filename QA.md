@@ -1,5 +1,16 @@
 # Validation report
 
+## Version 1.7.0 — 2026-10-19
+
+- **166 unit/integration tests passed**, 17 files, using the existing installed Vitest CLI.
+- **All 63 production browser tests passed (2.6 minutes)** against the final fresh TypeScript/root production build. Chromium launched outside the macOS sandbox; no skipped tests. Nine audit regressions supplement the previous 54 tests.
+- Traversed the actual application with synthetic records before and after changes: category/task setup, schedule/subtasks, completion/filter recovery, timer pause/reload/resume/finish, manual focus, split sleep, meals and every care type, nested history editing, all Insights panels, Notes/mood/history, preferences and JSON export/restore. The final normal-flow walkthrough reported zero page JavaScript errors.
+- Audit regressions cover guarded Close/Escape/Cancel/reload, initial focus and internal dialog padding, aligned nested confirmations at 320/390/1440px, unrelated stale errors, overlapping sleep totals/history, trimmed task search, inline preference validation and real save feedback, delayed and failed Insights loads with navigation/reload recovery, native selects and Reduced Motion.
+- Captured genuine before/after UI at **1440×1000 and 390×844** with the same synthetic data and clock. Reviewed all five routes, each Insights panel, editor/empty states and Notes reading/editing. Additional screenshots cover validation, saved feedback, running/paused, loading and scoped network failure. Automated responsive checks also retain the wider viewport coverage from earlier releases.
+- Added only restrained state transitions; retained existing task completion/undo, native selects, dialog and Insights movement. No hardware-vibration changes were made. All new motion respects the system Reduced Motion setting.
+- The `/dayflow/` deployment build uses **44 precache entries**. Dependency sections and the lockfile match the prior 1.6.1 source archive. No dependency installation or version change, database migration, backup-format change or icon change.
+- Physical iPhone/Safari rendering, native keyboard/picker behavior, frame rate and hardware haptics remain **unverified**. Browser touch/viewport simulation is not a physical-device test. The final core-flow checks found no remaining blocking issue within their scope; this does not establish that every possible browser/device state is defect-free.
+
 ## Version 1.6.1 — 2026-10-19
 
 - **166 unit/integration tests passed**, 17 files, using the installed Vitest CLI.
